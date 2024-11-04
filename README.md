@@ -9,14 +9,14 @@ Verifiable Delay Functions take a prescribed time to compute, even on a parallel
 ## Description
 
 We implement the approaches described in the following papers:
+
 1. [Sloth(Quadratic Residue) Verifiable Delay Functions](https://eprint.iacr.org/2018/601.pdf). Boneh, 2018
 2. [Simple Verifiable Delay Functions](https://eprint.iacr.org/2018/627.pdf). Pietrzak, 2018
 3. [Efficient Verifiable Delay Functions](https://eprint.iacr.org/2018/623.pdf). Wesolowski, 2018
 
-
 ## How to Build
 
-To build  from the source code you need to have a working
+To build from the source code you need to have a working
 Go environment with [version 1.12 or greater installed](https://golang.org/doc/install).
 
 ```
@@ -37,6 +37,14 @@ Delay:	0.10983 secs
 Verify:	0.00064 secs
 Verify Result:	true
 Delay/Verify:	170.32087
+```
+
+## How to publish
+
+```
+git tag v0.2.0
+git push origin v0.2.0
+GOPROXY=proxy.golang.org go list -m github.com/abraj/vdf@v0.2.0
 ```
 
 ## License
