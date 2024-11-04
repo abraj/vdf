@@ -63,9 +63,9 @@ func main() {
 		os.Exit(0)
 	}
 	t, _ := strconv.ParseInt(flagT, 10, 64)
-	x, _ := new(big.Int).SetString(flagX, 0)
-	p, _ := new(big.Int).SetString(p256, 0)
-	fmt.Printf("T:%v, x:%v, P:%v\n", t, x.Int64(), p.Int64())
+	x, _ := new(big.Int).SetString(flagX, 10)
+	p, _ := new(big.Int).SetString(p256, 10)
+	fmt.Printf("T:%v, x:%v, P:%v\n", t, x.Text(10), p.Text(10))
 
 	sqrtVDF(t, x, p)
 }
