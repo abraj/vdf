@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"sqrt"
+	"vdf/sqrt"
 )
 
 var (
