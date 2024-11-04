@@ -1,9 +1,9 @@
-export GOPATH := $(shell pwd)
+# export GOPATH := $(shell pwd)
 
 build:
 	@echo "--> Building..."
 	@mkdir -p bin/
-	go build -v -o bin/vdf src/cmd/main.go
+	go build -v -o bin/vdf main.go
 	@chmod 755 bin/*
 
 clean:
