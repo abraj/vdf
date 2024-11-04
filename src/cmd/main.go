@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"vdf/sqrt"
+	"github.com/abraj/vdf/sqrt"
 )
 
 var (
@@ -32,6 +32,10 @@ func init() {
 func usage() {
 	fmt.Println("Usage: " + os.Args[0] + " -x=[x value] -t=[y value]")
 	fmt.Println("For example: " + os.Args[0] + " -x=7 -t=1000")
+}
+
+func NewVDF(p *big.Int) *sqrt.VDFSqrt {
+	return sqrt.NewVDFSqrt(p)
 }
 
 func sqrtVDF(t int64, x *big.Int, p *big.Int) {

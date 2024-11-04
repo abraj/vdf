@@ -16,7 +16,7 @@ test:
 	@$(MAKE) testsqrt
 
 testsqrt:
-	go test -v sqrt
+	go test -v github.com/abraj/vdf/sqrt
 
 check:
 	go get -v github.com/golangci/golangci-lint/cmd/golangci-lint
