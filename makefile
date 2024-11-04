@@ -3,7 +3,7 @@
 build:
 	@echo "--> Building..."
 	@mkdir -p bin/
-	go build -v -o bin/vdf main.go
+	go build -v -o bin/vdf demo/main.go
 	@chmod 755 bin/*
 
 clean:

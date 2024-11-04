@@ -34,10 +34,6 @@ func usage() {
 	fmt.Println("For example: " + os.Args[0] + " -x=7 -t=1000")
 }
 
-func NewVDF(p *big.Int) *sqrt.VDFSqrt {
-	return sqrt.NewVDFSqrt(p)
-}
-
 func sqrtVDF(t int64, x *big.Int, p *big.Int) {
 	vdf := sqrt.NewVDFSqrt(p)
 	// Delay.
