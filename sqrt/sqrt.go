@@ -22,6 +22,12 @@ func NewVDFSqrt(p *big.Int) *VDFSqrt {
 	}
 }
 
+// Get the underlying prime used
+// NOTE: For "Sloth Quadratic Residue", prime p ≡ 3 mod 4
+func (v *VDFSqrt) GetModulus() *big.Int {
+	return v.p
+}
+
 // Euler's criterion is a formula for determining whether an integer is a quadratic residue modulo a prime.
 // A^((p-1)/2) % p, if it equals 1 then A is a quadratic residue module a prime number
 func (v *VDFSqrt) quadraticResidue(x *big.Int) bool {
